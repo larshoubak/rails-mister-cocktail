@@ -11,14 +11,15 @@
             <tr>
               <td><%= dose.ingredient.name %></td>
               <td><%= dose.description %></td>
+
               <td>
                 <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
               </td>
             </tr>
           <% end %>
 
-          <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
-
+          <%= render "shared/new-dose", cocktail: @cocktail, dose: @dose %>
+          <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
       </table>
 
 

@@ -1,6 +1,1 @@
-<h1>Build a new cocktail</h1>
-
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<%= render 'shared/new-cocktail', cocktail: @cocktail %>
